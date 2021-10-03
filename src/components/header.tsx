@@ -1,5 +1,5 @@
-import NextImage from "next/image";
 import React, { useEffect, useState } from "react";
+import { Dragonfly } from "../elements/dragonfly";
 import { Navlink } from "../elements/navlink";
 
 export const Header = () => {
@@ -33,7 +33,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 w-full px-12 py-2 bg-white bg-opacity-75 z-10">
+    <header className="sticky top-0 w-full px-12 py-2 bg-white z-10">
       <div className="max-w-3xl flex justify-between items-center w-full mx-auto">
         <a href="#home">
           <div
@@ -41,7 +41,7 @@ export const Header = () => {
               isShrunk ? "h-10 w-10 rotate-12" : "h-20 w-20 -rotate-12"
             }`}
           >
-            <NextImage src="/dragonfly_line.svg" layout="fill" />
+            <Dragonfly />
           </div>
         </a>
         <div className="flex gap-12">
