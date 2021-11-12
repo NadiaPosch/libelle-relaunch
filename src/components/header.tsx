@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Dragonfly } from "../elements/dragonfly";
-import { Navlink } from "../elements/navlink";
+import { Navigation } from "./Navigation";
 
 export const Header = () => {
   const [isShrunk, setShrunk] = useState(false);
@@ -34,7 +34,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 w-full px-12 py-2 bg-white z-10">
-      <div className="max-w-3xl flex justify-between items-center w-full mx-auto">
+      <div className="relative max-w-3xl flex justify-between items-center w-full mx-auto">
         <a href="#home">
           <div
             className={`transform transition-all duration-500 ${
@@ -44,11 +44,7 @@ export const Header = () => {
             <Dragonfly />
           </div>
         </a>
-        <div className="flex gap-12">
-          <Navlink href="#angebot">Angebot</Navlink>
-          <Navlink href="#ueber-mich">Über mich</Navlink>
-          <Navlink href="#kontakt">Kontakt</Navlink>
-        </div>
+        <Navigation />
       </div>
     </header>
   );
