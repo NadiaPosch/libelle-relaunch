@@ -78,8 +78,8 @@ const Home: NextPage = () => (
           frameBorder="0"
           scrolling="no"
         ></iframe>
+        <p className="absolute bottom-2">© 2021 Libelle Beauty Lounge</p>
       </Section>
-      <footer className="p-4 ">© 2021 Libelle Beauty Lounge</footer>
     </main>
   </div>
 );

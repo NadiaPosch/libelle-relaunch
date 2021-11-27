@@ -4,6 +4,16 @@
 
 @layer base {
   html {
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+  .scroll-snap-start {
+    scroll-snap-align: start;
   }
 }
