@@ -3,50 +3,45 @@ import NextImage from "next/image";
 import { FC } from "react";
 import { OfferCard } from "../components/offer-card";
 import { MenOffers, NailOffers, WomenOffers } from "../data/offers";
-import { Dragonfly } from "../elements/dragonfly";
+import { ChevronIcon } from "../elements/chevron-icon";
+import { HomeScreen } from "../elements/home-screen";
 import { Section } from "../elements/section";
 
 const LogoBubble: FC = () => (
   <a
     href="#home"
-    className="fixed bottom-2 right-2 z-10 flex items-center rounded-full bg-white shadow-xl p-2"
+    className="fixed bottom-2 right-2 z-10 flex items-center rounded-full bg-white text-yellow-500 shadow-xl p-2"
   >
-    <div className="h-10 w-10 transform rotate-12">
-      <Dragonfly />
-    </div>
+    <ChevronIcon />
   </a>
 );
 
 const Home: NextPage = () => (
-  <div className="flex flex-col">
+  <div className="flex flex-col text-gray-900">
     <LogoBubble />
     <main className="w-full" id="home">
-      <Section
-        id="home"
-        className="flex items-center bg-gradient-to-br from-yellow-600 to-yellow-400"
-      >
-        <div className="flex flex-col gap-16 w-full">
-          <div className="flex-none text-center">
-            <NextImage src="/libelle_logo.svg" width={400} height={150} />
-            <p className="italic text-2xl sm:text-4xl text-white">
-              Beauty Lounge
-            </p>
-          </div>
-          <div className="flex-grow">
-            <div className="w-full max-w-sm mx-auto">
-              <Dragonfly fillColor="white" />
-            </div>
-          </div>
-        </div>
-      </Section>
+      <HomeScreen />
       <Section id="angebot" title="Angebot">
-        <div className="flex flex-col gap-8 max-w-lg mx-auto">
-          <OfferCard title="Damen" offers={WomenOffers} />
+        <div className="flex flex-col gap-8">
+          <OfferCard
+            title="Damen"
+            offers={WomenOffers}
+            link="preisliste_coiffeur_2020.pdf"
+          />
           <OfferCard title="Herren" offers={MenOffers} />
-          <OfferCard title="Nägel" offers={NailOffers} />
+          <OfferCard
+            title="Nägel"
+            offers={NailOffers}
+            link="preisliste_naegel_2020.pdf"
+          />
         </div>
       </Section>
-      <Section id="ueber-mich" title="Über mich">
+
+      <Section
+        id="ueber-mich"
+        title="Über mich"
+        className="bg-gradient-to-b from-yellow-400 to-yellow-500"
+      >
         <NextImage
           className="block rounded-md shadow-lg"
           src="/valeria_balduzzi.jpg"
@@ -71,7 +66,7 @@ const Home: NextPage = () => (
           +41 52 536 39 68
         </address>
         <iframe
-          className="mt-8"
+          className="mt-8 sm:mb-12"
           width="100%"
           height={400}
           src="https://maps.google.com/maps?q=libelle%20beauty%20shop%20winterthur&t=&z=15&ie=UTF8&iwloc=&output=embed"

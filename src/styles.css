@@ -4,16 +4,24 @@
 
 @layer base {
   html {
-    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-snap-type: none;
+    }
   }
 }
 
 @layer utilities {
-  .scroll-snap-none {
-    scroll-snap-type: none;
-  }
   .scroll-snap-start {
     scroll-snap-align: start;
+  }
+  @media (min-width: 640px) {
+    .scroll-snap-start {
+      scroll-snap-align: none;
+    }
   }
 }
