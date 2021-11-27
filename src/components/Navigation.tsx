@@ -24,7 +24,7 @@ const Base: FC<BaseProps> = ({ className, onClick }) => (
   </nav>
 );
 
-export const Navigation: FC = () => {
+export const Navigation: FC<{ isShrunk: boolean }> = ({ isShrunk }) => {
   const router = useRouter();
   const [isOpen, setOpen] = useState(false);
 
@@ -33,10 +33,15 @@ export const Navigation: FC = () => {
       <Base className="hidden sm:flex gap-12" />
       <div
         className={`${
-          isOpen ? "fixed top-6 right-12" : "block"
+          isOpen
+            ? isShrunk
+              ? "fixed top-2 right-2"
+              : "fixed top-6 right-2"
+            : "-mr-2 block"
         } sm:hidden z-20`}
       >
         <Hamburger
+          size={24}
           toggled={isOpen}
           toggle={() => setOpen(!isOpen)}
           color="#dd6b20"

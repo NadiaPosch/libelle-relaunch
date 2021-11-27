@@ -7,8 +7,8 @@ type Props = {
   className?: string;
 };
 export const Section: FC<Props> = ({ title, id, children, className = "" }) => (
-  <div className={`pt-12 px-8 mb-12 min-h-screen ${className}`}>
-    {title && <Title id={id}>{title}</Title>}
+  <div id={id} className={`pt-12 px-4 sm:px-8 min-h-screen ${className}`}>
+    {title && <Title>{title}</Title>}
     {children}
   </div>
 );

@@ -33,7 +33,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 w-full px-12 py-2 bg-white z-10">
+    <header className="sticky top-0 w-full px-4 sm:px-12 py-2 bg-white z-10">
       <div className="relative max-w-3xl flex justify-between items-center w-full mx-auto">
         <a href="#home">
           <div
@@ -44,7 +44,7 @@ export const Header = () => {
             <Dragonfly />
           </div>
         </a>
-        <Navigation />
+        <Navigation isShrunk={isShrunk} />
       </div>
     </header>
   );
