@@ -2,26 +2,30 @@ import { Offer } from "../components/offer-card";
 
 export const WomenOffers: Offer[] = [
   {
-    title: "Haarschnitt",
+    title: "Damenhaarschnitt",
     from: 65,
+    to: 81,
   },
   {
-    title: "Coloration",
+    title: "Coloration, Schneiden, Föhnen",
     from: 139,
+    to: 165,
   },
   {
-    title: "Folienmèche",
+    title: "Folienmèche, Schneiden Föhnen",
     from: 150,
+    to: 200,
   },
   {
-    title: "Haarumformung",
+    title: "Dauerhafte Haarumformung",
     from: 139,
+    to: 200,
   },
 ];
 
 export const MenOffers: Offer[] = [
   {
-    title: "Haarschnitt",
+    title: "Herrenhaarschnitt",
     from: 43,
   },
   {
@@ -34,13 +38,16 @@ export const NailOffers: Offer[] = [
   {
     title: "Neues Set",
     from: 150,
+    to: 162,
   },
   {
     title: "Auffüllen",
     from: 85,
+    to: 102,
   },
   {
     title: "Maniküre",
     from: 45,
+    to: 55,
   },
 ];
